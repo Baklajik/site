@@ -79,25 +79,6 @@ body{
     font-weight: 700; 
 }
 
-.footer{
-    background-color: black;
-    padding: 50px 0 32px;
-    color:white;
-}
-
-.footer__menu{
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer__menu-list{
-    max-width: 250px;
-}
-
-.footer__menu-item + .footer__menu-item{
-    padding-top: 20px;
-}
-
 .main{
     flex-grow: 1;
 }
@@ -122,7 +103,6 @@ body{
 }
 
 .classification ul, .how-choose ul{
-    /* list-style-type:disc; */
     font-size: 16px;
     text-align: left;
     padding-left: 30px;
@@ -181,4 +161,23 @@ body{
 }
 .product button:hover {
     background-color: #0056b3;
+}
+
+.footer{
+    background-color: black;
+    padding: 50px 0 32px;
+    color:white;
+}
+
+.footer__menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__menu-list{
+    max-width: 250px;
+}
+
+.footer__menu-item + .footer__menu-item{
+    padding-top: 20px;
 }
