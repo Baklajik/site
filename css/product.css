@@ -13,6 +13,21 @@
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.thumbnail {
+    width: 150px; /* Установите желаемую ширину */
+    height: auto; /* Автоматически подстраивайте высоту */
+    border: 2px solid #ddd; /* Граница */
+    padding: 5px; /* Внутренний отступ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    cursor: pointer; /* Изменение курсора при наведении */
+    transition: transform 0.3s; /* Анимация масштабирования */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+
 .modal-content {
     margin: auto;
     display: block;
