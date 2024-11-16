@@ -12,13 +12,22 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+}
 
 .thumbnail {
-    width: 150px; /* Установите желаемую ширину */
-    height: auto; /* Автоматически подстраивайте высоту */
-    border: 2px solid #ddd; /* Граница */
+    width: 240px; /* Установите желаемую ширину */
+    height: 180px;
+    margin-top: 20px;
     padding: 5px; /* Внутренний отступ */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
     cursor: pointer; /* Изменение курсора при наведении */
     transition: transform 0.3s; /* Анимация масштабирования */
 }
@@ -71,3 +80,124 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.price-info{
+    margin-bottom: 10px;
+}
+
+.price-label {
+    color: #555; 
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+.price-value {
+    color: #4682B4; 
+    font-weight: normal; 
+    font-size: 25px;
+}
+
+button {
+    background-color: #4A90E2; /* Синий цвет фона */
+    color: white; /* Белый цвет текста */
+    border: none; /* Без границы */
+    padding: 10px 20px;
+    margin-top: 10px; 
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    display: inline-block; /* Инлайн-блок для кнопки */
+    font-size: 25px; /* Размер шрифта */
+    font-family: Arial, sans-serif; /* Семейство шрифтов */
+    border-radius: 4px; /* Слегка закругленные углы */
+    cursor: pointer; /* Указатель курсора при наведении */
+}
+
+button:hover {
+    background-color: #357ABD; 
+}
+
+.buy_card {
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    right: 0; 
+    max-width: 380px; 
+    max-height: 300px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.buy_card h2 {
+    margin-bottom: 10px; 
+    font-size: 30px;
+}
+
+.price-info p{
+    font-size: 20px;
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation li{
+    margin-right: 20px;
+    color: gray;
+    font-size: 18px;
+    display: flex; 
+    align-items: center;
+}
+
+.navigation{
+    margin-bottom: 10px;
+}
+
+.info_logo { 
+    height: 1em; 
+    width: 1em;   
+}
+
+.description h1{
+    margin-bottom: 10px;
+}
+
+.description h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description li{
+    margin-bottom: 5px;
+}
+
+.characteristics h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    width: 540px;
+}
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+
