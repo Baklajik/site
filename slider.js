@@ -1,31 +1,22 @@
 let currentSlide = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === currentSlide) {
-            slide.classList.add('active');
-        }
-    });
+function updateSlidePosition() {
+    const slides = document.querySelector('.slides');
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`; // Перемещение слайдов
 }
 
 function nextSlide() {
-    showSlide(currentSlide + 1);
+    const slides = document.querySelectorAll('.slide');
+    currentSlide = (currentSlide + 1) % slides.length; // Зацикливание слайдов
+    updateSlidePosition();
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
+    const slides = document.querySelectorAll('.slide');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Зацикливание назад
+    updateSlidePosition();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
+    updateSlidePosition();
 });

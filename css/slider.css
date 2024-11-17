@@ -1,28 +1,22 @@
 .slider {
     position: relative;
-    width: 80%;
-    max-width: 1400px;
+    width: 100%; /* Слайдер на всю ширину */
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    align-items: center;
 }
 
 .slides {
-    position: relative; 
-    width: 100%; 
-    display: flex; 
-    transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Плавная анимация */
 }
 
-.slide { 
-    display: none; 
-    width: 100%; 
-    border-radius: 10px;
+.slide {
+    min-width: 100%; /* Слайды одинакового размера */
+    flex-shrink: 0;
 }
 
-.slide.active { 
-    display: block;
+.slide img {
+    width: 100%; /* Изображение заполняет весь слайд */
+    height: auto;
 }
 
 .prev, .next {
@@ -36,6 +30,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .prev {
