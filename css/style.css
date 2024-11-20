@@ -168,6 +168,11 @@ body{
     color:white;
 }
 
+.footer p{
+    text-align: center;
+    margin-top: 32px;
+}
+
 .footer__menu{
     display: flex;
     justify-content: space-around;
