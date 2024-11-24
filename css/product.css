@@ -1,16 +1,15 @@
-/* Modal styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); 
 }
 .content-wrapper {
     display: flex;
@@ -24,16 +23,16 @@
 }
 
 .thumbnail {
-    width: 240px; /* Установите желаемую ширину */
+    width: 240px; 
     height: 180px;
     margin-top: 20px;
-    padding: 5px; /* Внутренний отступ */
-    cursor: pointer; /* Изменение курсора при наведении */
-    transition: transform 0.3s; /* Анимация масштабирования */
+    padding: 5px; 
+    cursor: pointer; 
+    transition: transform 0.3s;
 }
 
 .thumbnail:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
+    transform: scale(1.05); 
 }
 
 
@@ -98,18 +97,14 @@
 }
 
 button {
-    background-color: #4A90E2; /* Синий цвет фона */
-    color: white; /* Белый цвет текста */
-    border: none; /* Без границы */
+    background-color: #4A90E2; 
+    color: white; 
+    border: none; 
     padding: 10px 20px;
-    margin-top: 10px; 
-    text-align: center; /* Выравнивание текста по центру */
-    text-decoration: none; /* Убираем подчеркивание текста */
-    display: inline-block; /* Инлайн-блок для кнопки */
-    font-size: 25px; /* Размер шрифта */
-    font-family: Arial, sans-serif; /* Семейство шрифтов */
-    border-radius: 4px; /* Слегка закругленные углы */
-    cursor: pointer; /* Указатель курсора при наведении */
+    margin-top: 10px;  
+    font-size: 25px; 
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
 button:hover {
@@ -198,6 +193,33 @@ th {
 }
 td {
     border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 900px) {
+    .buy_card {
+        max-width: 300px;
+    }
+    .price-value {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .buy_card {
+        max-width: 100%; 
+        margin-right: 0;
+    }
+    .price-info p {
+        font-size: 18px; 
+    }
 }
 
 
