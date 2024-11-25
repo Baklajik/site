@@ -46,12 +46,12 @@ body{
     align-items: flex-end;
 }
 
-.logo__img{
+.logo_img{
     max-width: 80px;
     max-height: 80px;
 }
 
-.header__inner{
+.header_inner{
     padding-top: 40px;
     padding-bottom: 45px;
     display: flex;
@@ -63,20 +63,20 @@ body{
     background-color: white;
 }
 
-.header__inner p{
+.header_inner p{
     margin-right: auto;
     margin-left: 20px;
     font-size: 2em;
     font-weight: bold;
 }
 
-.menu__list{
+.menu_list{
     display: flex;
     gap: 45px;
     margin-bottom: 7px;
 }
 
-.menu__list-link{
+.menu_list-link{
     color:black;
     font-size: 20px;
     font-weight: 700; 
@@ -173,16 +173,16 @@ body{
     margin-top: 32px;
 }
 
-.footer__menu{
+.footer_menu{
     display: flex;
     justify-content: space-around;
 }
 
-.footer__menu-list{
+.footer_menu-list{
     max-width: 250px;
 }
 
-.footer__menu-item + .footer__menu-item{
+.footer_menu-item + .footer_menu-item{
     padding-top: 20px;
 }
 
@@ -212,18 +212,18 @@ body{
     .container{
         padding: 0 10px;
     }
-    .header__inner{
+    .header_inner{
         padding-top: 20px;
         padding-bottom: 25px;
         flex-direction: column;
         align-items: flex-start;
     }
-    .menu__list{
+    .menu_list{
         flex-direction: column;
         gap: 20px;
         margin-bottom: 0;
     }
-    .menu__list-link{
+    .menu_list-link{
         font-size: 16px;
     }
     .classification h2, .how-choose h2, .popular_products h2{
@@ -237,11 +237,11 @@ body{
     .product {
         width: 150px;
     }
-    .footer__menu{
+    .footer_menu{
         flex-direction: column;
         align-items: center;
     }
-    .footer__menu-list{
+    .footer_menu-list{
         max-width: 100%;
         text-align: center;
     }
