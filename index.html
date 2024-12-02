@@ -10,6 +10,86 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
     <script src="slider.js"></script>
+    <script src="chatbot.js"></script>
+    <style>
+        #chat-container {
+            width: 300px;
+            height: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            padding: 10px;
+            border: none;
+            border-radius: 10px 10px 0 0;
+        }
+        .message {
+            margin: 5px 0;
+        }
+        .user {
+            text-align: right;
+            color: blue;
+        }
+        .bot {
+            text-align: left;
+            color: green;
+        }
+        #chat-panel {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #open-chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #close-chat-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            color: gray;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #send-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+    </style>
 </head>
 <body>
    
@@ -41,13 +121,12 @@
             <div class="container">
                 <div class="slider">
                     <div class="slides">
-                        <img src="https://hikvisionpro.ru/upload/resize_cache/iblock/08b/650_800_1/08b9e743fb17095515ded1c31f9cad1c.jpg" alt="Slide 1" class="slide">
-                        <img src="https://www.t-save.ru/upload/iblock/d34/s0imwne31jc5rb12vdpyv5r91xxarvp9.jpg" alt="Slide 2" class="slide">
-                        <img src="https://ezviz.by/upload/iblock/bca/56vx51q98rkfpz2m8ucqp5w9126d51to.jpg" alt="Slide 3" class="slide">
+                        <!-- Картинки будут загружены здесь -->
                     </div>
                     <button class="prev" onclick="prevSlide()">&#10094;</button>
                     <button class="next" onclick="nextSlide()">&#10095;</button>
                 </div>
+                
                 <div class="classification">
                     <h2>Классификация</h2>
                     <h3>Все камеры видеонаблюдения, реализуемые в нашей компании, можно разделить по категориям в зависимости от:</h3>
@@ -138,6 +217,18 @@
                     </ul>
                 </div>
             </div>
+
+                <button id="open-chat-btn" onclick="toggleChat()">💬</button>
+                <div id="chat-panel">
+                    <button id="close-chat-btn" onclick="toggleChat()">❌</button>
+                    <br>
+                    <div id="chat-container"></div>
+                    <div id="input-container">
+                        <input type="text" id="user-input" placeholder="Введите сообщение...">
+                        <button id="send-btn" onclick="sendMessage()">Отправить</button>
+                    </div>
+                </div>
+                
         </main>
         <footer class="footer">
             <div class="container">
@@ -165,6 +256,17 @@
             </div>
         </footer>
     </div>
-
+    <!-- <script>
+        document.getElementById('loadImageBtn').addEventListener('click', async () => {
+          try {
+            const response = await fetch('/api/image');
+            const data = await response.json();
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = `<img src="${data.image}" alt="Loaded Image">`;
+          } catch (error) {
+            console.error('Error loading image:', error);
+          }
+        });
+      </script> -->
 </body>
 </html>
